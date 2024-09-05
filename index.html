@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Creative - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <script type="text/javascript">
+          window.onload = function() {
+            const videos = document.querySelectorAll(".video");
+            videos.forEach(video => {
+              video.addEventListener('mouseenter', () => {
+                video.currentTime = 0;
+                video.play();
+              });
+              
+              const sources = video.getElementsByTagName('source');
+              const split = sources[0].src.split("#t=")
+              const time = split.length > 1 ? parseFloat(split[1]) : 0.0;
+              video.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = time;
+              });
+            });
+          }
+        </script>
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Jazzin Jordan</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">The Concept</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Connect</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-left justify-content-left text-left">
+                    <div class="col-lg-6 align-self-end">
+                        <h1 class="text-white font-weight-bold">Learn Authentic Jazz Dance with Jordan</h1>
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <a class="btn btn-primary btn-xl" href="#contact">Hit Me Up!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 ">
+                        <div class="text-center">
+                          <h2 class="mt-0">The Concept</h2>
+                          <hr class="divider-center divider-light" />
+                        </div>
+                        <p class="mb-4">A blend of attitude, style, and urban movement, authentic vernacular jazz is a dance form deeply rooted in African American culture. Its expressions&mdash;Lindy Hop, Charleston, and Solo Jazz&mdash;originated as a social dance in Harlem, New York, during the vibrant swing era of the late 1920s. For the past decade, I have been teaching jazz steps to aspiring dancers across three cities, always with radiating passion and overflowing joy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Portfolio-->
+        <section id="portfolio" class="page-section">
+            <div class="container-fluid px-4 m-0">
+                <div class="row gx-5 m-0 p-0">
+                    <div class="col-lg-3 col-sm-6">
+                      <div class="video-thumb rounded-5">
+                        <video class="video" style="object-position:47% 50%;" width="100%" muted="true" loop preload="metadata">
+                          <source src="assets/industry.mp4#t=4.0" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                      <div class="video-thumb rounded-5">
+                        <video class="video" style="object-position:50% 50%;" width="100%" muted="true" loop preload="metadata">
+                          <source src="assets/woods.mp4#t=8.5" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                      <div class="video-thumb rounded-5">
+                        <video class="video" style="object-position:42% 50%;" width="100%" muted="true" loop preload="metadata">
+                          <source src="assets/water.mp4#t=12.0" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                      <div class="video-thumb rounded-5">
+                        <video class="video" style="object-position:47% 50%;" width="100%" muted="true" loop preload="metadata">
+                          <source src="assets/forest.mp4#t=13.0" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services-->
+        <section class="bg-dark text-white page-section" id="services">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="text-center col-lg-8">
+                  <h2 class="mt-0">Services</h2>
+                  <hr class="divider-light divider-center" />
+                </div>
+              </div>
+                    
+              <div class="row gx-4 gx-lg-5 mt-5"> 
+                <div class="col-md-4 text-center">
+                  <div class="mb-2">
+                    <svg width="50" height="50" viewBox="0 0 512 512" style="color:#f0bd78" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="108" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 576 512" fill="#f0bd78" x="0" y="0" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#f0bd78"><path fill="currentColor" d="M80 96a48 48 0 1 0 0-96a48 48 0 1 0 0 96zm-16 32c-35.3 0-64 28.7-64 64v128c0 17.7 14.3 32 32 32c9.8 0 18.5-4.4 24.4-11.2l24 144.5c2.9 17.4 19.4 29.2 36.8 26.3s29.2-19.4 26.3-36.8L123.1 352h15.7l30 134.9c3.8 17.3 20.9 28.1 38.2 24.3s28.1-20.9 24.3-38.2L174 215l116.3 53.8c.5.3 1.1.5 1.6.7c8.6 3.6 18 3.1 25.9-.7c3.4-1.6 6.6-3.9 9.3-6.7c3.1-3.2 5.5-7 7.1-11.4c.1-.3.2-.7.3-1l2.5-7.5c5.7-17.1 18.3-30.9 34.7-38.2l8-3.5c1-.4 1.9-.8 2.9-1.2l-16.9 63.5c-5.6 21.1-.1 43.6 14.7 59.7l70.7 77.1l22 88.1c4.3 17.1 21.7 27.6 38.8 23.3s27.6-21.7 23.3-38.8l-23-92.1c-1.9-7.8-5.8-14.9-11.2-20.8l-49.5-54l19.3-65.5l9.6 23c4.4 10.6 12.5 19.3 22.8 24.5l26.7 13.3c15.8 7.9 35 1.5 42.9-14.3s1.5-35-14.3-42.9L537 232.7l-15.3-36.8c-17.2-41.1-57.4-67.9-102-67.9c-22.8 0-45.3 4.8-66.1 14l-8 3.5a128.9 128.9 0 0 0-58.1 51.6l-130.2-60.2c-12.6-5.9-26.4-8.9-40.3-8.9H64zm400-32a48 48 0 1 0 0-96a48 48 0 1 0 0 96zM349.7 335.6l-25 62.4l-59.4 59.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l61.7-61.7c4.6-4.6 8.2-10.1 10.6-16.1l14.5-36.2l-40.7-44.4c-2.5-2.7-4.8-5.6-7-8.6z"/></g></svg></svg>
+                  </div>
+                  <h3 class="h4 mb-2">Regular Classes</h3> 
+                  <div class="col-md-12">
+                    <p class="text-muted mb-0">Build a foundation, have fun, and get challenged!</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                  <div class="mb-2">
+                    <svg width="50" height="50" viewBox="0 0 512 512" style="color:#f0bd78" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="108" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 512 512" fill="#f0bd78" x="0" y="0" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#f0bd78"><path fill="currentColor" d="M247 28v80h18V28zm35 0v64l80-32zm-26 96c-48 48-144 112-192 128c0 64-16 208-32 240h160c16-16 64-144 64-192c0 48 48 176 64 192h160c-16-32-32-176-32-240c-48-16-144-80-192-128zM112 300h80v80h-80z"/></g></svg></svg>      
+                  </div>
+                  <h3 class="h4 mb-2">Events</h3>
+                  <div class="col-md-12">
+                    <p class="text-muted mb-0">Seeking entertainment for a private party or a corporate event?</p>
+                  </div>
+                </div>
+
+                <div class="col-md-4 text-center">
+                  <div class="mb-2">
+                    <svg width="50" height="50" viewBox="0 0 512 512" style="color:#f0bd78" xmlns="http://www.w3.org/2000/svg" class="h-full w-full"><rect width="512" height="512" x="0" y="0" rx="108" fill="transparent" stroke="transparent" stroke-width="0" stroke-opacity="100%" paint-order="stroke"></rect><svg width="512px" height="512px" viewBox="0 0 16 16" fill="#f0bd78" x="0" y="0" role="img" style="display:inline-block;vertical-align:middle" xmlns="http://www.w3.org/2000/svg"><g fill="#f0bd78"><path fill="currentColor" d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/></g></svg></svg>
+                  </div>
+                  <h3 class="h4 mb-2">Specialized Offers</h3>
+                  <div class="col-md-12">
+                    <p class="text-muted mb-0">My special offers for your special circumstances!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section id="contact">
+            <div class="container-fluid m-0 p-0">
+              <div class="row m-0 p-0">
+
+                <div class="col-md-6" style="padding: 8rem 0">
+                  <div class="container px-4">
+                    <div class="row justify-content-center">
+                      <div class="col-lg-8 text-left">
+                        <div class="text-center">
+                          <h2 class="mt-0">Connect</h2>
+                          <hr class="divider-center divider-light" />
+                        </div>
+                        <p class="text-muted mb-5">If I got you hooked and you are interested in learning more about jazz dance or need a teacher for your event, reach out below!</p>
+                      </div>
+                    </div>
+                    
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                      <div class="col-lg-8 col-xl-6 text-center">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 bg-services">
+                  &nbsp;
+                </div>
+              </div> 
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2024 - Jazzin Jordan</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
